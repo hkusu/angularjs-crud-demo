@@ -1,0 +1,44 @@
+<div class="container">
+  <br>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>名前</th>
+      <th>価格</th>
+      <th>メモ</th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="item in items">
+      <td>
+        <input ng-model="item.name">
+      </td>
+      <td>
+        <input ng-model="item.price">
+      </td>
+      <td>
+        <input ng-model="item.memo">
+      </td>
+      <td align="center">
+        <button type="button" class="btn btn-warning" ng-click="update($index)">更新</button>
+        <button type="button" class="btn btn-danger" ng-click="delete($index)">削除</button>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input ng-model="newName">
+      </td>
+      <td>
+        <input ng-model="newPrice">
+      </td>
+      <td>
+        <input ng-model="newMemo">
+      </td>
+      <td align="center">
+        <button type="button" class="btn btn-info" ng-click="add()" ng-disabled="!newName">追加</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
